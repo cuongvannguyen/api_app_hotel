@@ -1,0 +1,7 @@
+Flags: X - disabled 
+ #   NAME        SERVICE CALLER-ID     PASSWORD     PROFILE     REMOTE-ADDRESS 
+ 0   cuong.nv    ovpn                  Sctv@123     OpenVPN    
+ 1   khang.va    ovpn                  Sctv@1234    UserMngt...
+ 2   thai.dnt    ovpn                  Sctv@123     UserMana...
+ 3   loc.tt      ovpn                  7H744BstL... UserVPN-Loc
+

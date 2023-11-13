@@ -1,0 +1,97 @@
+trình biên dịch code compiler babelrc giúp chuyển code để cho máy đọc hiểu như các biết let và var
+express là thư viện của JS
+export default chỉ export đúng 1 hàm duy nhất
+
+res.send() trả về client kết quả là một object
+res.render("home.ejs") trả về một view ejs dùng theo mô hình VMC không có tách 
+
+bootstrap 5 không dùng jquery nữa mà dùng JS thuần bởi vì với khối lượng code rất lớn thì jquery hay nhưng nó phát sinh nhiều vấn đề về performance hiệu năng ứng dụng website
+ router.post("/delete-user/:id", homeController.handleDeleteUser) dấu : để nói cho express biết là id là biến động
+ console.log("check id: ", req.params.id)
+
+ config body-parser giúp node js lấy được params, lấy được body từ req
+
+ các thư viện cần dùng 
+ npm install --save-exact sequelize@6.13.0 sequelize-cli@6.3.0
+ npm install --save-exact uelize-cli@6.3.0
+
+ NoSQL thì tất cả dữ liệu sẽ được nhét vào 1 object gọi là 1 document thì có nhược điểm là muốn lưu trữ gì cũng được thì xảy ra hiện tượng lưu thừa dữ liệu.
+ SQL là một row của bảng 
+
+ Các bước để triển khai ứng dụng lên hệ thống: 
+
+ 1. cần setup file env biến môi trường -> các tham số đẩy vào trong file .env như url backend/frontend/database 
+ 2. build backend 
+ "build-src":"babel src -d build --copy-files"
+ -d: tên thư mục outfa-pull-left
+ --copy-files: copy non-javascript file (css, html)
+ "build": "node build/server.js"
+
+ khi build lại nodejs thì client sẽ tương thích với code và chạy nhẹ hơn 
+
+ Build MySQL voi Docker với docker compose MySQL
+ 
+
+
+Quan hệ giữa các table 
+1 project có bn khách hàng => 1 . 1
+1 khách hàng có bn project => 1 . n 
+
+=> foreikey nằm ở bảng project
+
+1 nhân viên có bn project => 1 . n 
+1 project có bn nhân viên => 1 . n 
+
+GROUP.belongsToMany(models.ROLE, {through: "GROUP_ROLE"})
+
+=> trong trường hợp quan hệ nhiều nhiều (N-N) thì có thêm bảng mapping 
+
+B1: phân tích đề bài xem có bao nhiêu đối tượng 
+
+mỗi một ứng dụng thì sẽ có một con server chuyên để đăng nhập gọi là SSO
+
+phân quyền cho người dùng có cá library node_acl Access control lists
+
+so sánh giữa nest js và react js
++ nest js sẽ viết cả fortend và backend trên cùng 1 product => ưu điểm cần 1 project là xong (2 trong 1) => nhược điểm 
++ react chia là 2 product hoặc 2 ứng dụng là BE và FE riêng biệt sẽ giải quyết 2 vấn đề là 2 project chạy 2 hê thống và 2 mạng nên khi bị hack FE thì BE không bị ảnh hưởng, 2 là khi user lớn thì ta cân bằng tải cho BE lên nhanh hơn thì nó mới chịu tải được.
+
+cơ chế hoạt động của cookie khi vào một trang web thì trình duyệt sẽ tự động gửi thông tin của người dùng được lưu trữ trong cookie tới server 
+
+Mô hình hoạt động của Website sử dụng JWT
+install jsonwebtoken@8.5.1
+
+npx kill-port 8080
+
+convert Excel to JSON
+
+
+Một số vẫn đề hiện tại em thấy đang tồn tại app mới: 
+
+1. Vấn đề thanh toán/ mua gói ứng dụng. Mới chỉ được mua them hình thức Momo và 
+plugin trên store. Ngoài ra còn một hình thức thụ động nữa là khách hàng chuyển tiền vào 
+tài khoản ngân hàng sau đó kt sẽ check và mở gói tuy nhiên thời gian thực hiện sẽ rất lâu.
+2. Hệ thống chỉ được quản lý và vận hành bởi bên ngoài không có sự giám sát nào của SCTV nên 
+thường bị lỗi về việc khách hàng không đăng nhập app, tài khoản đã mua gói bị lỗi và không xem được 
+
+
+netstat -a -n -o | findstr:8080
+
+/node_snmp/src/storage/uploads
+
+docker run --name 2023_be_t2 --network snmp_network -v /home/2023/data:/node_snmp/src/storage/uploads/ -p 8080:8080 -p 161:161 -p 162:162 -d 2023_be_t2_new:v1
+
+docker build -t dvbt2_be:v9 -f dockerFileBE .
+docker run --name dvbt2_be_v9 --network snmp_network -v /home/2023/data:/node_snmp/src/storage/uploads/ -p 8080:8080 -p 161:161 -p 162:162 -d dvbt2_be:v9
+
+docker build -t dvbt2_fe:v13 -f dockerFile .
+docker run -it --name dvbt2_fe_v13 --network snmp_network -p 80:3000 -d dvbt2_fe:v13
+
+
+LogFile=/var/log/zabbix/zabbix_server.log
+
+
+Hiện tại PCL-NC-PT chỉ đang có một nhân sự (fullstack Web) về thiết kế CSDL quản trị nội dung, thiết kế web CMS Hotel cho khách sạn. đảm nhiệm hệ thống phần cứng như hệ thống mạng, hệ thống server, hệ thống Streamming Live TV, Vod, phụ trách viết các API tương tác hệ thống theo yêu cầu của ứng dụng hotel.
+Hiện đang còn thiếu:
+Một nhân sự Design đảm nhiệm việc thiết kế UI/UX giao diện đồ hoạ cho ứng dụng, nhận yêu cầu phân tích và mô phỏng lên màn hình thiết bị để demo và đưa cho nhân sự thiết kế giao diện app thực hiện. Designer này sẽ là cầu nối để chuyển đổi các tính năng và giải pháp lên thực tế, giúp cho lãnh đạo dễ ràng quản lý được sản phẩm và đánh giá tính khả thi trong quá trình phát triển sản phẩm.
+Một nhân sự (Frontend Devenloper) phụ trách thiết kế giao diện App Hotel tương thích với HĐH Android, làm việc theo thiết kế có sẵn của design và lấy các thông tin được cuung cấp trong API để build lên ứng dụng. 
